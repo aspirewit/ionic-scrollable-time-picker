@@ -1,0 +1,14 @@
+<div class="heading">{{time.hour}} : {{time.minute}} <span ng-show="configs.format == 12">{{time.meridian}}</span></div>
+
+<proton:multi-list-picker ng-model="time">
+  <proton:multi-list-picker-list alias="hour" source="hours" cycle="true">
+  </proton:multi-list-picker-list>
+
+  <proton:multi-list-picker-list alias="minute" source="minutes" cycle="true">
+  </proton:multi-list-picker-list>
+
+  <proton:multi-list-picker-list alias="meridian" ng-if="configs.format == 12">
+    <proton-multi-list-picker-list-item>AM</proton-multi-list-picker-list-item>
+    <proton-multi-list-picker-list-item>PM</proton-multi-list-picker-list-item>
+  </proton:multi-list-picker-list>
+</proton:multi-list-picker>

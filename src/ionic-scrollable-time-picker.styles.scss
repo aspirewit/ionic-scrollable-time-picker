@@ -1,0 +1,79 @@
+$primary: #009688;
+$white: #FFFFFF;
+
+.ionic-scrollable-time-picker .popup {
+  width: 100%;
+  margin-left: 4%;
+  margin-right: 4%;
+
+  .popup-head {
+    display: none;
+  }
+
+  .popup-body {
+    padding: 0;
+    background-color: #FEFEFE;
+
+    .heading {
+      height: 44px;
+      background-color: $primary;
+      color: $white;
+      text-align: center;
+      line-height: 44px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .proton-multi-list-picker .container .lists {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+
+      * {
+        -webkit-box-sizing: content-box;
+           -moz-box-sizing: content-box;
+                box-sizing: content-box;
+      }
+
+      .list-container {
+        border: none;
+        &[data-index='0'], &[data-index='1'], &[data-index='2'] {
+          width: 32%;
+        }
+
+        .list {
+          border: none;
+
+          .item {
+            background: none;
+            border: none;
+            font-size: 24px;
+
+            &.selected {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .popup-buttons {
+    padding: 0;
+    min-height: 44px;
+    height: 44px;
+
+    .button {
+      padding: 0;
+      margin: 0;
+
+      background-color: $primary;
+      color: $white;
+
+      &.button_close {
+        margin-left: 1px;
+      }
+    }
+  }
+}

@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "ionic": "^1.3.2"
+    "ionic": "^1.3.2",
+    "proton-multi-list-picker": "https://github.com/mmnaseri/proton.multi-list-picker.git"
   }
 }

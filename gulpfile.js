@@ -18,7 +18,7 @@ gulp.task('html2js', function () {
 });
 
 gulp.task('css2js', function () {
-  return gulp.src(['./src/*.scss', './bower_components/proton-multi-list-picker/dist/proton.multi-list-picker.css'])
+  return gulp.src('./src/*.scss')
     .pipe(sass())
     .pipe(css2js())
     .pipe(concat('styles.js'))
@@ -26,7 +26,7 @@ gulp.task('css2js', function () {
 });
 
 gulp.task('make-bundle', ['del', 'html2js', 'css2js'], function () {
-  return gulp.src(['./dist/*', './src/*.js', './bower_components/proton-multi-list-picker/dist/proton.multi-list-picker.min.js'])
+  return gulp.src(['./dist/*', './src/*.js'])
     .pipe(concat('ionic-scrollable-time-picker.bundle.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/'));
